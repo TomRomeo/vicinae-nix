@@ -131,6 +131,7 @@ in
           nodejs
           qt6.qtwayland
           wayland
+          "${out}/bin"
         ]}
     '';
 
