@@ -2,7 +2,6 @@
   config,
   pkgs,
   lib,
-  vicinaePkg,
   ...
 }:
 let
@@ -14,7 +13,7 @@ in {
 
     package = lib.mkOption {
       type = lib.types.package;
-      default = vicinaePkg;
+      default = config.vicinae.package;
       defaultText = lib.literalExpression "vicinae";
       description = "The vicinae package to use";
     };
