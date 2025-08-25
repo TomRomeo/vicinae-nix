@@ -5,7 +5,7 @@
   ...
 }:
 let
-  vicinae = pkgs.callPackage ./vicinae.nix {};
+  vicinae = import ./vicinae.nix;
   cfg = config.services.vicinae;
 in {
 
