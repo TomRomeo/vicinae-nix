@@ -3,7 +3,7 @@ on:
   pull_request:
   push:
 jobs:
-  tests:
+  push_to_cachix:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
