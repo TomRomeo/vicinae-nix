@@ -20,7 +20,7 @@
       {
         packages.default = vicinae;
       }
-    ) // let
+    ) // {config, pkgs, lib, ...}@args: let
       vicinaePkg = self.packages.${pkgs.system}.default;
     in {
       homeManagerModules.default = import ./module.nix {inherit config pkgs lib vicinaePkg;};
