@@ -6,6 +6,11 @@
     flake-utils.url = "github:numtide/flake-utils";
   };
 
+  nixConfig = {
+    extra-substituters = ["https://tomromeo.cachix.org"];
+    extra-trusted-public-keys = ["tomromeo.cachix.org-1:RNtotxybU2sStsoulE4np6THs0bTw2SBtKFfKogBah0="];
+  };
+
   outputs = { self, nixpkgs, flake-utils }:
     flake-utils.lib.eachDefaultSystem (system:
       let
