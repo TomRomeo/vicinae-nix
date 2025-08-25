@@ -7,7 +7,7 @@
 }:
 let
   cfg = config.services.vicinae;
-  vicinaePkg = self.outputs.packages.${pkgs.system}.vicinae;
+  vicinaePkg = self.outputs.packages.${pkgs.system}.default;
 in {
 
   options.services.vicinae = {
