@@ -2,10 +2,12 @@
   config,
   pkgs,
   lib,
+  self,
   ...
 }:
 let
   cfg = config.services.vicinae;
+  vicinaePkg = self.outputs.packages.${pkgs.system}.vicinae;
 in {
 
   options.services.vicinae = {
@@ -13,7 +15,7 @@ in {
 
     package = lib.mkOption {
       type = lib.types.package;
-      default = config.vicinae.package;
+      default = vicinaePkg;
       defaultText = lib.literalExpression "vicinae";
       description = "The vicinae package to use";
     };
