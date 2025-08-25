@@ -20,7 +20,9 @@
       {
         packages.default = vicinae;
       }
-    ) // {
-      homeManagerModules.default = import ./module.nix {inherit pkgs; inherit vicinae;};
+    ) // let
+      vicinaePkg = self.packages.${pkgs.system}.default;
+    in {
+      homeManagerModules.default = import ./module.nix {inherit config pkgs lib vicinaePkg;};
     };
 }
