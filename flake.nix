@@ -21,6 +21,6 @@
         packages.default = vicinaePkg;
       }
     ) // {
-      homeManagerModules.default = {config,pkgs,lib,...}: import ./module.nix {inherit config pkgs lib self ...};
+      homeManagerModules.default = {config,pkgs,lib,...}: import ./module.nix {inherit config pkgs lib self};
     };
 }
