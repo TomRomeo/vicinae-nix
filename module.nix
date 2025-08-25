@@ -2,10 +2,10 @@
   config,
   pkgs,
   lib,
+  vicinae,
   ...
 }:
 let
-  vicinae = import ./vicinae.nix;
   cfg = config.services.vicinae;
 in {
 
