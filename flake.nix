@@ -12,7 +12,7 @@
         pkgs = nixpkgs.legacyPackages.${system};
       in
       {
-        packages.hello = pkgs.callPackage ./vicinae.nix {};
+        packages.default = pkgs.callPackage ./vicinae.nix {};
       }
     ) // {
       homeManagerModules.default = import ./module.nix;
