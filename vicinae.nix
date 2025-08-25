@@ -105,7 +105,6 @@ in
     '';
 
     buildPhase = ''
-      echo "Dummy change to test cachix"
       export npm_config_cache=${apiDeps}
       cd /build/source/api
       npm i --ignore-scripts
