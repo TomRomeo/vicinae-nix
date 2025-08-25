@@ -15,12 +15,12 @@
     flake-utils.lib.eachDefaultSystem (system:
       let
         pkgs = nixpkgs.legacyPackages.${system};
-        vicinae = pkgs.callPackage ./vicinae.nix {};
+        vicinaePkg = pkgs.callPackage ./vicinae.nix {};
       in
       {
-        packages.default = vicinae;
+        packages.default = vicinaePkg;
       }
     ) // {
-      homeManagerModules.default = import ./module.nix {inherit config pkgs lib; vicinaePkg = self.packages.${pkgs.system}.default;};
+      homeManagerModules.default = import ./module.nix;
     };
 }
