@@ -36,7 +36,7 @@ let
   # Prepare node_modules for api folder
   apiDeps = fetchNpmDeps {
     src = src + /api;
-    hash = "";
+    hash = "sha256-7rsaGjs1wMe0zx+/BD1Mx7DQj3IAEZQvdS768jVLl3E=";
   };
   ts-protoc-gen-wrapper = writeShellScriptBin "protoc-gen-ts_proto" ''
     exec node /build/source/vicinae-upstream/api/node_modules/.bin/protoc-gen-ts_proto
