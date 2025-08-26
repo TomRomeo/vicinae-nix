@@ -29,14 +29,14 @@ let
   src = fetchFromGitHub {
     owner = "vicinaehq";
     repo = "vicinae";
-    rev = "v0.6.2";
-    hash = "sha256-hMDUrs5XkQ0FyIYZ1mp8DwMVHnxl/GWmRjs0CZ6eAh0=";
+    rev = "v0.7.0";
+    hash = "";
   };
 
   # Prepare node_modules for api folder
   apiDeps = fetchNpmDeps {
     src = src + /api;
-    hash = "sha256-7rsaGjs1wMe0zx+/BD1Mx7DQj3IAEZQvdS768jVLl3E=";
+    hash = "";
   };
   ts-protoc-gen-wrapper = writeShellScriptBin "protoc-gen-ts_proto" ''
     exec node /build/source/vicinae-upstream/api/node_modules/.bin/protoc-gen-ts_proto
@@ -45,7 +45,7 @@ let
   # Prepare node_modules for extension-manager folder
   extensionManagerDeps = fetchNpmDeps {
     src = src + /extension-manager;
-    hash = "sha256-7kScWi1ySUBTDsGQqgpt2wYmujP9Mlwq3x2FKOlGwgo=";
+    hash = "";
   };
 
 in
