@@ -30,7 +30,7 @@ let
     owner = "vicinaehq";
     repo = "vicinae";
     rev = "v0.7.0";
-    hash = "";
+    hash = "sha256-tXyP7KJxiLzmm1XrhPnCemg+TEBB8tuTlGyCKiTIdYQ=";
   };
 
   # Prepare node_modules for api folder
