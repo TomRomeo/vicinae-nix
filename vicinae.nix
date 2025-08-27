@@ -127,7 +127,7 @@ in
     '';
     postFixup = ''
         wrapProgram $out/bin/vicinae \
-        --set PATH ${lib.makeBinPath [
+        --prefix PATH : ${lib.makeBinPath [
           nodejs
           qt6.qtwayland
           wayland
