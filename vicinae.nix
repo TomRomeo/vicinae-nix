@@ -29,8 +29,8 @@ let
   src = fetchFromGitHub {
     owner = "vicinaehq";
     repo = "vicinae";
-    rev = "v0.7.0";
-    hash = "sha256-tXyP7KJxiLzmm1XrhPnCemg+TEBB8tuTlGyCKiTIdYQ=";
+    rev = "21d1ea5ea278aa9fed6337fe1dafdf7666229ac9";
+    hash = "sha256-/a0uRnUhTVck4pyJBwK/++bZznWIPFBAab340TrQqto=";
   };
 
   # Prepare node_modules for api folder
