@@ -56,6 +56,7 @@ in
     inherit src;
 
     cmakeFlags = [
+        "-DVICINAE_GIT_TAG=${src.rev}"
         "-DCMAKE_INSTALL_PREFIX=${placeholder "out"}"
         "-DCMAKE_INSTALL_DATAROOTDIR=share"
         "-DCMAKE_INSTALL_BINDIR=bin"
