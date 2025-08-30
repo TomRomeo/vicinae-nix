@@ -29,8 +29,8 @@ let
   src = fetchFromGitHub {
     owner = "vicinaehq";
     repo = "vicinae";
-    rev = "21d1ea5ea278aa9fed6337fe1dafdf7666229ac9";
-    hash = "sha256-/a0uRnUhTVck4pyJBwK/++bZznWIPFBAab340TrQqto=";
+    rev = "v0.8.1";
+    hash = "sha256-HlNorGRnYr+dmEQkn0AAOyhoma+0X3m6S9Jev7MwvSU=";
   };
 
   # Prepare node_modules for api folder
@@ -56,6 +56,7 @@ in
     inherit src;
 
     cmakeFlags = [
+        "-DVICINAE_GIT_TAG=${src.rev}"
         "-DCMAKE_INSTALL_PREFIX=${placeholder "out"}"
         "-DCMAKE_INSTALL_DATAROOTDIR=share"
         "-DCMAKE_INSTALL_BINDIR=bin"

@@ -41,6 +41,3 @@ Simply add the repository to your home-manager flake.nix as an input and add it 
     };
 }
 ```
-
-## Current problems
-- wlr-clip can not be found at runtime. Because of this, clipboard management does not work at the moment.
