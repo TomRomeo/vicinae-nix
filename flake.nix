@@ -14,7 +14,7 @@
   outputs = { self, nixpkgs, flake-utils }:
     flake-utils.lib.eachDefaultSystem (system:
       let
-        pkgs = nixpkgs.legacyPackages.${system};
+        pkgs = builtins.abort "This flake is deprecated. Please use the one provided by the official package. You can find migration instructions in this repository.";
         vicinaePkg = pkgs.callPackage ./vicinae.nix {};
       in
       {
